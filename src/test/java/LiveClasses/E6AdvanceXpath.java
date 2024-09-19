@@ -5,19 +5,14 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import java.util.List;
-
-public class E3TagName {
+public class E6AdvanceXpath {
     public static void main(String[] args) {
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
-        driver.get("https://www.syntaxprojects.com");
+        driver.get("https://www.syntaxprojects.com/advanceXpath.php");
 
-        List<WebElement> links = driver.findElements(By.tagName("a"));
-
-        for(WebElement link:links){
-            System.out.println(link.getAttribute("href"));
-        }
+        WebElement child = driver.findElement(By.xpath("//div[@id='familyTree']/child::input[3]"));
+        child.sendKeys("Crocodile");
         driver.quit();
     }
 }

@@ -5,19 +5,13 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import java.util.List;
-
-public class E3TagName {
+public class E7CSSSelector {
     public static void main(String[] args) {
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
-        driver.get("https://www.syntaxprojects.com");
+        driver.get("https://syntaxprojects.com/cssSelector-homework.php");
 
-        List<WebElement> links = driver.findElements(By.tagName("a"));
-
-        for(WebElement link:links){
-            System.out.println(link.getAttribute("href"));
-        }
-        driver.quit();
+        WebElement userId = driver.findElement(By.cssSelector("input#UserID"));
+        userId.sendKeys("12345");
     }
 }

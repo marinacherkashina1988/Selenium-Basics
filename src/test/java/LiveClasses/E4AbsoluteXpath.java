@@ -5,19 +5,13 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import java.util.List;
-
-public class E3TagName {
+public class E4AbsoluteXpath {
     public static void main(String[] args) {
+
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get("https://www.syntaxprojects.com");
 
-        List<WebElement> links = driver.findElements(By.tagName("a"));
-
-        for(WebElement link:links){
-            System.out.println(link.getAttribute("href"));
-        }
-        driver.quit();
+        WebElement ex1 = driver.findElement(By.xpath("/html/body/div[2]/div/div[2]/div[1]/div[2]/form/div/input"));
     }
 }
