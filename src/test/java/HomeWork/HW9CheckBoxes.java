@@ -24,7 +24,8 @@ public class HW9CheckBoxes {
 
         List<WebElement> hobbies = driver.findElements(By.xpath("//input[@type='checkbox' and @class='cb-element']"));
         for (WebElement hobby : hobbies) {
-            if (hobby.getAttribute("value").equals("reading") || hobby.getAttribute("value").equals("cooking")) {
+            String value = hobby.getAttribute("value");
+            if (value.equals("reading") || value.equals("cooking")) {
                 hobby.click();
             }
         }

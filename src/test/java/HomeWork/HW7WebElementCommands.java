@@ -16,8 +16,13 @@ public class HW7WebElementCommands {
         driver.get("https://syntaxprojects.com/selenium_commands_selector-homework.php");
 
         WebElement attribute = driver.findElement(By.xpath("//div[@id='textattr']"));
-        String value = attribute.getAttribute("data-text-attr");
-        System.out.println(value);
+        String textA = attribute.getText();
+        System.out.println(textA);
+        if (textA.equals("inspect me to view my custom attribute!")){
+            System.out.println("Text matches the acceptance criteria");
+        } else {
+            System.out.println("Text doesn't match");
+        }
 
         WebElement mealOpt1 = driver.findElement(By.xpath("//input[@value='music_festival']"));
         boolean enabled = mealOpt1.isEnabled();
