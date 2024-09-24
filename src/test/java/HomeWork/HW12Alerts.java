@@ -6,7 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class HW11Alerts {
+public class HW12Alerts {
     public static void main(String[] args) {
 
         WebDriver driver = new ChromeDriver();
