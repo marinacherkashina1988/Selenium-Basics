@@ -13,4 +13,8 @@ public class ConfigReader {
         properties.load(fis);
         return properties.getProperty(key);
     }
+
+    public static String read(String key) throws IOException {
+        return read(Constants.CONFIG_FILE_PATH, key);
+    }
 }

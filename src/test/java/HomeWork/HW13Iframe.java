@@ -25,7 +25,8 @@ public class HW13Iframe {
         sel.selectByVisibleText("Chicago");
 
         driver.switchTo().defaultContent();
-        driver.switchTo().frame(0);
+        WebElement frame1 = driver.findElement(By.xpath("//iframe[@id='textfieldIframe']"));
+        driver.switchTo().frame(frame1);
         WebElement userName = driver.findElement(By.xpath("//input[@name='Username']"));
         userName.sendKeys("Marina");
     }

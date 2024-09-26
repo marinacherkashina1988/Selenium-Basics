@@ -13,9 +13,7 @@ public class CommonMethods {
 
     public static void openBrowserAndLaunchApplication() throws IOException {
 
-        String browserName = ConfigReader.read("C:\\Users\\ahmed\\IdeaProjects\\SeleniumBasics\\src\\test\\resources\\ConfigFiles\\config.properties", "browser");
-
-        switch (browserName) {
+        switch (ConfigReader.read("browser")) {
             case "Chrome":
                 driver = new ChromeDriver();
                 break;
@@ -30,7 +28,6 @@ public class CommonMethods {
         }
         driver.manage().window().maximize();
 
-        String url = ConfigReader.read("C:\\Users\\ahmed\\IdeaProjects\\SeleniumBasics\\src\\test\\resources\\ConfigFiles\\config.properties", "url");
-        driver.get(url);
+        driver.get(ConfigReader.read("url"));
     }
 }
