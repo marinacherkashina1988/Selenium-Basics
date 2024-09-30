@@ -19,7 +19,7 @@ public class HW17StaticTables {
         int count = 1;
 
         for (WebElement countriesRow : allCountries) {
-            String countrySearch = countriesRow.getText(); //this line is optional and code will work without it
+            String countrySearch = countriesRow.getText();
             if (countrySearch.equals("USA")) {
                 System.out.println(count); //not really necessary to have this print out
                 WebElement row = driver.findElement(By.xpath("//table[@id='task-table']/tbody/tr[" + count + "]"));
