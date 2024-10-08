@@ -31,6 +31,7 @@ public class HW19Calendars {
                     String currentDate = fromDate.getText();
                     if (currentDate.equals("19")) {
                         fromDate.click();
+                        break;
                     }
                 }
                 notFromMonth = false;
@@ -55,6 +56,7 @@ public class HW19Calendars {
                     String currentDate = toDate.getText();
                     if (currentDate.equals("7")) {
                         toDate.click();
+                        break;
                     }
                 }
                 notFromMonth = false;
